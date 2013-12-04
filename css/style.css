@@ -228,3 +228,12 @@
 #calandar .np {
     font-size: 15px !important;
 }
+
+
+#calandar caption .np {
+    font-size: 20px !important;
+}
+
+#calandar .cal td.off {
+    background-color: #F3F3F3;
+}
