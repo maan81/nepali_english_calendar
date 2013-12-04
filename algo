@@ -5,21 +5,21 @@ generate array for nepali calendar
  - if nepali date, 
  	- convert to english
 
- - if english
- 	- convert to nepali date
-
- - goto the 1st day of the selected nepali month
-
- - convert the 1st nepali date to english date
-
- - get its weekday, ie. the first weekday of the nepali month
+ +----------------------------
+ |- if english
+ |	- convert to nepali date
+ +----------------------------
+ 
+ - convert the 1st nepali date to english date ... to get its weekday, 
+ 	ie. the first weekday of the nepali month
 
  - if 1st weekday is not sunday
-    - generate array to hold info. for 1 day :
-		array(en_year,en_month,en_date,np_year,np_month,np_date,week_of_month)
- 	- fill the array with blanks upto that day
+ 	- loop until the first weekday approches
+      - generate array to hold info. for 1 day :
+	      array(en_year,en_month,en_date,np_year,np_month,np_date,week_of_month)
+ 	  - fill the array with blanks upto that day
 
- - loop through 1 to end of the month in nepali
+ - loop from 1 to end of the month in nepali
     - generate array to hold info. for 1 day :
 		array(en_year,en_month,en_date,np_year,np_month,np_date,week_of_month)
 	- push that array into the array holding the month's info.
@@ -27,3 +27,4 @@ generate array for nepali calendar
 
 generate html : 
  - loop through the array
+ 

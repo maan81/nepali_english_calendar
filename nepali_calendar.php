@@ -95,6 +95,30 @@
 			90=>array(2090, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30)
 			);
 	 	
+		private $s_en_month = array(
+									'January' 	=> 'Jan',
+									'February'	=> 'Feb',
+									'March'		=> 'Mar',
+									'April'		=> 'Apr',
+									'May'		=> 'May',
+									'June'		=> 'Jun',
+									'July'		=> 'Jul',
+									'August'	=> 'Aug',
+									'September'	=> 'Sept',
+									'October'	=> 'Oct',
+									'November'	=> 'Nov',
+									'December'	=> 'Dec'
+								);
+		private $s_en_day = array(
+								'Sunday'  => 'Sun',
+								'Monday'  => 'Mon',
+								'Tuesday' => 'Tue',
+								'Wednesday'=>'Wed',
+								'Thursday'=> 'Thurs',
+								'Friday'  => 'Fri',
+								'Saturday'=> 'Sat'
+							);
+
 	 	private $nep_date = array('year'=>'', 'month'=>'', 'date'=>'', 'day'=>'','nmonth'=>'','num_day'=>'');
 	 	private $eng_date = array('year'=>'', 'month'=>'', 'date'=>'', 'day'=>'','emonth'=>'','num_day'=>'');
 	 	public $debug_info = "";
@@ -133,51 +157,51 @@
 			
 			switch($m){
 				case 1:
-					$n_month = "Baishak";
+					$n_month = "बैसाख";
 					break;
 					
 				case 2:
-					$n_month = "Jestha";
+					$n_month = "जेठ";
 					break;
 					
 				case 3:
-					$n_month = "Ashad";
+					$n_month = "आषाढ़";
 					break;
 					
 				case 4:
-					$n_month = "Shrawn";
+					$n_month = "श्रावण";
 					break;
 					
 				case 5:
-					$n_month = "Bhadra";
+					$n_month = "भाद्र";
 					break;
 				
 				case 6:
-					$n_month = "Ashwin";
+					$n_month = "आस्विन";
 					break;
 				
 				case 7:
-					$n_month = "kartik";
+					$n_month = "कार्तिक";
 					break;
 				
 				case 8:
-					$n_month = "Mangshir";
+					$n_month = "मंसिर";
 					break;
 				
 				case 9:
-					$n_month = "Poush";
+					$n_month = "पौस";
 					break;
 				
 				case 10:
-					$n_month = "Magh";
+					$n_month = "माघ";
 					break;
 				
 				case 11:
-					$n_month = "Falgun";
+					$n_month = "फाल्गुन";
 					break;
 				
 				case 12:
-					$n_month = "Chaitra";
+					$n_month = "चैत्र";
 					break;
 			}	
 			return  $n_month;
@@ -297,7 +321,14 @@
 			return true;
 		}	
 		
+		private function get_short_day($dd){
+			return $this->s_en_day[$dd];
+		}
 		
+		private function get_short_month($mm){
+			return $this->s_en_month[$mm];
+		}
+
 		/**
 		 * currently can only calculate the date between AD 1944-2033...
 		 *
@@ -377,6 +408,7 @@
 				$this->nep_date["month"] = $m;
 				$this->nep_date["date"] = $total_nDays;
 				$this->nep_date["day"] = $this->get_day_of_week($day);
+				$this->nep_date["s_day"] = $this->get_short_day($this->get_day_of_week($day));
 				$this->nep_date["nmonth"] = $this->get_nepali_month($m);
 				$this->nep_date["num_day"] = $numDay;
 				return $this->nep_date;
@@ -456,12 +488,31 @@
 				$this->eng_date["year"] = $y;					
 				$this->eng_date["month"] = $m;					
 				$this->eng_date["date"] = $total_eDays;		
-				$this->eng_date["day"] = $this->get_day_of_week($day);					
-				$this->eng_date["emonth"] = $this->get_english_month($m);  			
+				$this->eng_date["day"] = $this->get_day_of_week($day);	
+				$this->eng_date["s_day"] = $this->get_short_day($this->get_day_of_week($day));
+				$this->eng_date["emonth"] = $this->get_english_month($m);
+				$this->eng_date["s_emonth"] = $this->get_short_month($this->get_english_month($m));
 				$this->eng_date["num_day"] = $numDay;			
 				
 				return $this->eng_date;			
 			}
 		}
 	
+
+		/**
+		 * get the number of days in the given nepali month
+		 *
+		 * @param int nepali year
+		 * @param int nepali month
+		 * @return int number of days in the month
+		 */
+		public function get_num_days($yy,$mm){
+
+			if($this->is_range_nep($yy, $mm, 1)===false){
+				return false;
+			}
+
+			$year_data = $this->bs[$yy-2000];
+			return $year_data[$mm];
+		}
 	};

@@ -1,4 +1,4 @@
-#calandar *{
+#calendar *{
   margin: 0;
   padding: 0;
   border: 0;
@@ -7,36 +7,36 @@
   vertical-align: baseline;
 }
 
-#calandar article, #calandar aside, #calandar details, #calandar figcaption, 
-#calandar figure, #calandar footer, #calandar header, #calandar hgroup, 
-#calandar menu, #calandar nav, #calandar section {
+#calendar article, #calendar aside, #calendar details, #calendar figcaption, 
+#calendar figure, #calendar footer, #calendar header, #calendar hgroup, 
+#calendar menu, #calendar nav, #calendar section {
   display: block;
 }
 
-#calandar {
+#calendar {
   line-height: 1;
 }
 
-#calandar ol, #calandar ul {
+#calendar ol, #calendar ul {
   list-style: none;
 }
 
-#calandar blockquote, #calandar q {
+#calendar blockquote, #calendar q {
   quotes: none;
 }
 
-#calandar blockquote:before, #calandar blockquote:after,
-#calandar q:before, #calandar q:after {
+#calendar blockquote:before, #calendar blockquote:after,
+#calendar q:before, #calendar q:after {
   content: '';
   content: none;
 }
 
-#calandar table {
+#calendar table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-#calandar .about {
+#calendar .about {
   margin: 70px auto 40px;
   padding: 8px;
   width: 260px;
@@ -54,7 +54,7 @@
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
 }
-#calandar .about a {
+#calendar .about a {
   color: #333;
   text-decoration: none;
   border-radius: 2px;
@@ -63,26 +63,26 @@
   -o-transition: background 0.1s;
   transition: background 0.1s;
 }
-#calandar .about a:hover {
+#calendar .about a:hover {
   text-decoration: none;
   background: #fafafa;
   background: rgba(255, 255, 255, 0.7);
 }
 
-#calandar .about-links {
+#calendar .about-links {
   height: 30px;
 }
-#calandar .about-links > a {
+#calendar .about-links > a {
   float: left;
   width: 50%;
   line-height: 30px;
   font-size: 12px;
 }
 
-#calandar .about-author {
+#calendar .about-author {
   margin-top: 5px;
 }
-#calandar .about-author > a {
+#calendar .about-author > a {
   padding: 1px 3px;
   margin: 0 -1px;
 }
@@ -94,31 +94,31 @@
  * Licensed under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
  */
-#calandar  {
+#calendar  {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
   color: #404040;
   background: #444444 url("../img/bg.png") 0 0 repeat;
   width: 420px;
 }
 
-#calandar .container {
+#calendar .container {
   margin: 50px auto;
   width: 640px;
 }
-#calandar .container .cal {
+#calendar .container .cal {
   margin: 0 auto;
 }
 
-#calandar .cal {
+#calendar .cal {
   display: block;
   width: 420px;/*width: 216px;*/
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
-#calandar .cal a {
+#calendar .cal a {
   text-decoration: none;
 }
-#calandar .cal caption {
+#calendar .cal caption {
   display: block;
   line-height: 32px;
   font-weight: bold;
@@ -132,31 +132,31 @@
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
 }
-#calandar .cal caption a {
+#calendar .cal caption a {
   display: block;
   line-height: 32px;
   padding: 0 10px;
   font-size: 15px;
   color: #e2e2e2;
 }
-#calandar .cal caption a:hover {
+#calendar .cal caption a:hover {
   color: white;
 }
-#calandar .cal caption .prev {
+#calendar .cal caption .prev {
   float: left;
 }
-#calandar .cal caption .next {
+#calendar .cal caption .next {
   float: right;
 }
-#calandar .cal th, #calandar .cal td {
+#calendar .cal th, #calendar .cal td {
   width: 60px;/*width: 30px;*/
   text-align: center;
   text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 }
-#calandar .cal th:first-child, #calandar .cal td:first-child {
+#calendar .cal th:first-child, #calendar .cal td:first-child {
   border-left: 0;
 }
-#calandar .cal th {
+#calendar .cal th {
   line-height: 20px;
   font-size: 8px;
   color: #696969;
@@ -164,13 +164,13 @@
   background: #f3f3f3;
   border-left: 1px solid #f3f3f3;
 }
-#calandar .cal td {
+#calendar .cal td {
   font-size: 11px;
   font-weight: bold;
   border-top: 1px solid #c2c2c2;
   border-left: 1px solid #c2c2c2;
 }
-#calandar .cal td a {
+#calendar .cal td a {
   clear: both;
   display: block;
   position: relative;
@@ -184,13 +184,13 @@
   -webkit-box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
   box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
 }
-#calandar .cal td a:hover, #calandar .cal td.off a {
+#calendar .cal td a:hover, #calendar .cal td.off a {
   background: #f3f3f3;
 }
-#calandar .cal td.off a {
+#calendar .cal td.off a {
   color: #b3b3b3;
 }
-#calandar .cal td.active a, #calandar .cal td a:active {
+#calendar .cal td.active a, #calendar .cal td a:active {
   margin: -1px;
   color: #f3f3f3;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
@@ -199,21 +199,21 @@
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
-#calandar .cal td.active:first-child a, #calandar .cal td:first-child a:active {
+#calendar .cal td.active:first-child a, #calendar .cal td:first-child a:active {
   border-left: 0;
   margin-left: 0;
 }
-#calandar .cal td.active:last-child a, #calandar .cal td:last-child a:active {
+#calendar .cal td.active:last-child a, #calendar .cal td:last-child a:active {
   border-right: 0;
   margin-right: 0;
 }
-#calandar .cal tr:last-child td.active a, #calandar .cal tr:last-child td a:active {
+#calendar .cal tr:last-child td.active a, #calendar .cal tr:last-child td a:active {
   border-bottom: 0;
   margin-bottom: 0;
 }
 
 
-#calandar .small {
+#calendar .small {
     float: right;
     font-size: 9.5px;
     height: 16px;
@@ -221,19 +221,19 @@
     margin-right: 5px;
 }
 
-#calandar .center {
+#calendar .center {
     margin-left: 15px;
 }
 
-#calandar .np {
+#calendar .np {
     font-size: 15px !important;
 }
 
 
-#calandar caption .np {
+#calendar caption .np {
     font-size: 20px !important;
 }
 
-#calandar .cal td.off {
+#calendar .cal td.off {
     background-color: #F3F3F3;
 }
