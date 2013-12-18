@@ -32,7 +32,7 @@
     return $date;
   }
 
-  require('nepali_calendar.php');
+  require('nepali_calendar_class.php');
   $cal = new Nepali_Calendar();
   $cur_month=[];
 

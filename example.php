@@ -1,5 +1,5 @@
 <?php
-	include('nepali_calendar.php');
+	include('nepali_calendar_class.php');
 	$cal = new Nepali_Calendar();
 	
 	var_dump ($cal->eng_to_nep(2008,11,23));
