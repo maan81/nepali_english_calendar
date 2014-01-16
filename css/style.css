@@ -154,7 +154,7 @@
   text-shadow: 0 1px rgba(255, 255, 255, 0.8);
 }
 #calendar .cal th:first-child, #calendar .cal td:first-child {
-  border-left: 0;
+ /* border-left: 0;*/
 }
 #calendar .cal th {
   line-height: 20px;
@@ -236,4 +236,19 @@
 
 #calendar .cal td.off {
     background-color: #F3F3F3;
+}
+
+/* added for a correction .... */
+#calendar .cal tr td.off:last-child {
+/*    border-left: 1px inset rgba(0, 0, 0, 0.2);*/
+}
+/* firefox hack ..... */
+@-moz-document url-prefix() {
+  #calendar .cal tr td.off:last-child {
+      border-left: 3px inset rgba(0, 0, 0, 0.2);
+  }
+}
+/* added for a correction .... */
+#calendar .cal tr td:last-child a {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
